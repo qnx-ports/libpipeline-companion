@@ -4,7 +4,7 @@
 maintainer="Celeste <cielesti@protonmail.com>"
 pkgname=libpipeline
 pkgver=1.5.8
-pkgrel=0
+pkgrel=${pkgrel:-0}
 pkgdesc="C pipeline manipulation library"
 url="https://libpipeline.gitlab.io/libpipeline/"
 vcs_url="https://gitlab.com/libpipeline/libpipeline"
@@ -34,6 +34,7 @@ package() {
 }
 
 
+options="$options ${DISABLE_CHECK:+!check}"
 sha512sums="
 0ae94df4bd508f0e664fa5430687d64904c60d69d9565c18cacb70251f8653cb7c571325d1406c859fdd149048adce8c4b3bf028573064496d7da3436e27b9b0  libpipeline-1.5.8.tar.gz
 "
